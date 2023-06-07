@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+<style>
+.digital-clock{
+
+width: 330px;
+background: darkgreen;
+border-radius: 10px;
+font-family: Arial;
+font-size: 50px;
+font-weight: bold;
+color: thistle;
+text-emphasis: center;
+letter-spacing: 3px;
+text-align: center;
+margin-top: 30px;
+overflow: hidden;
+margin: auto;
+float: left;
+
+}
+
+</style>
+ </head>
+<body>
+
+
+    <div class="digital-clock">
+    <table>
+    <tr>
+        <th><p id = "jam"></p></th>
+        <th>:</th>
+        <th><p id = "menit"></p></th>
+        <th>:</th>
+        <th><p id = "detik"></p></th>
+    </tr>
+ </table>
+
+
+ 
+    <script type="text/javascript">
+        window.setTimeout("wktu()", 1000);
+        function wktu(){
+            var wktu = new Date;
+            setTimeout("wktu()", 1000);
+            document.getElementById("jam").innerHTML = wktu.getHours();
+            document.getElementById("menit").innerHTML = wktu.getMinutes();
+            document.getElementById("detik").innerHTML = wktu.getSeconds();
+        }
+       </script></div>
+</body>
+    </html>
